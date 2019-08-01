@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
 	"appid": "wx641a7d3aee01641a",
-	"projectname": "myMagazine",
+	"projectname": "webapp-magazine",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

@@ -8,6 +8,6 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text bind:tap='navagateTo' class="user-motto">{{motto}}</text>
   </view>
 </view>

@@ -15,6 +15,21 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  navagateTo: function() {
+    wx.navigateTo({
+      url: '/pages/test/index',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

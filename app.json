@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/test/index",
-    "pages/inside/inside",
-    
+    "pages/list/index",
     "pages/index/index",
+    "pages/inside/inside",
+    "pages/test/index",
     "pages/logs/logs"
     
   ],
