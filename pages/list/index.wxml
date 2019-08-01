@@ -4,9 +4,9 @@
   <!-- tuijian -->
   <view class='recommend-container'>
     <view class='article'>
-      <text class="date">{{date}}</text>
-      <text class='title'>{{title}}</text>
-      <image class='img' mode='widthFix' src='{{imgSrc}}' />
+      <text class="date">{{recommend.date}}</text>
+      <text class='title'>{{recommend.title}}</text>
+      <image class='img' mode='widthFix' src='{{recommend.imgSrc}}' />
     </view>
 
     <view class='recommend-box'>
@@ -17,58 +17,34 @@
   </view>
 
   <!-- liebiao -->
-  <view class='recommend-list-container'>
+  <view wx:for="{{articleList}}" class='recommend-list-container'>
     <view class='pre-article'>
       <view class='article-head'>
         <image src='/assets/image/avatar.png'/>
-        <text>reeyou</text>
+        <text>{{item.markPeople}}</text>
         <text>等</text>
-        <text>96</text>
+        <text>{{item.markCount}}</text>
         <text>人马克了</text>
       </view>
       <view class='article-cover'>
         <image mode='widthFix' src='/assets/image/list/article/1.png'/>
       </view>
       <view class='article-title'>
-        <text>不伦之吻，吻背后的令人惊令人惊令人惊讶的往事</text>
+        <text>{{item.articleTitle}}</text>
       </view>
       <view class='article-handle-box'>
         <view class='article-review'>
-          <text>深度阅读</text>
+          <text>{{item.articleType}}</text>
         </view>
         <view class='article-handle'>
-          <image src='/assets/image/icon/icon_more.png'/>
-          <image src='/assets/image/icon/icon_relay.png'/>
-          <image src='/assets/image/icon/icon_circle.png'/>
+          <image data-articleType="{{item.articleType}}" bindtap="handleOnMore" src='/assets/image/icon/icon_more.png'/>
+          <button open-type="share">
+            <image src='/assets/image/icon/icon_relay.png'/>
+          </button>
+          <image bindtap='handleOnLike' data-articleLike="{{index}}" wx:if="{{listLike[index]}}" src='/assets/image/icon/icon_circle_fill.png'/>
+          <image bindtap='handleOnLike' data-articleLike="{{index}}" wx:else src='/assets/image/icon/icon_circle.png'/>
         </view>
       </view>
     </view>
   </view>
-  <view class='recommend-list-container'>
-      <view class='pre-article'>
-        <view class='article-head'>
-          <image src='/assets/image/avatar.png'/>
-          <text>reeyou</text>
-          <text>等</text>
-          <text>96</text>
-          <text>人马克了</text>
-        </view>
-        <view class='article-cover'>
-          <image mode='widthFix' src='/assets/image/list/article/1.png'/>
-        </view>
-        <view class='article-title'>
-          <text>不伦之吻，吻背后的令人惊令人惊令人惊讶的往事</text>
-        </view>
-        <view class='article-handle-box'>
-          <view class='article-review'>
-            <text>深度阅读</text>
-          </view>
-          <view class='article-handle'>
-            <image bindtap='handleOnMore' data-articleTap='{{}}' src='/assets/image/icon/icon_more.png'/>
-            <image src='/assets/image/icon/icon_relay.png'/>
-            <image src='/assets/image/icon/icon_circle.png'/>
-          </view>
-        </view>
-      </view>
-    </view>
 </view>

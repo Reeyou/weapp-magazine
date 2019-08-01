@@ -62,7 +62,7 @@
 }
 .pre-article {
   background: #fff;
-  padding: 0 20rpx 40rpx 20rpx;
+  padding: 0 20rpx 20rpx 20rpx;
 }
 .article-head {
   padding: 16rpx 0;
@@ -90,8 +90,7 @@
   font-size: 34rpx;
   font-weight: bold;
   line-height: 48rpx;
-  text-align: center;
-  padding: 10rpx 0;
+  padding: 24rpx 0;
 }
 .article-handle-box {
   display: flex;
@@ -104,10 +103,27 @@
   border-radius: 6rpx;
   padding: 14rpx 24rpx;
 }
+.article-handle {
+  display: flex;
+}
 .article-handle image{
   width: 40rpx;
   height: 40rpx;
-  margin-left: 30rpx;
+  margin-left: 10rpx;
   vertical-align: middle;
-  display: inline-block
+}
+.article-handle button:after {
+  border: none;
+}
+.article-handle button {
+  position: relative;
+  bottom: 28rpx;
+  width: 70rpx;
+  height: 70rpx;
+  padding: 0;
+  background: transparent;
+  margin-left: 10rpx;
+}
+.article-handle button image {
+  margin-left: 0;
 }
