@@ -19,6 +19,6 @@ function request(params) {
 function showErrMsg() {
   wx.showToast({
     title: "请求错误",
-    icon: "none"
+    icon: "none" 
   })
 }
