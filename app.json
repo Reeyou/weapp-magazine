@@ -4,8 +4,8 @@
     "pages/index/index",
     "pages/inside/inside",
     "pages/test/index",
-    "pages/logs/logs"
-    
+    "pages/type/type",
+    "pages/articleDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

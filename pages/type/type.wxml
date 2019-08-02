@@ -1,23 +1,25 @@
-<!--pages/list/index.wxml-->
+<!--pages/type/type.wxml-->
 <view class='container'>
 
-  <!-- tuijian -->
-  <view class='recommend-container'>
-    <view class='article'>
-      <text class="date">{{recommend.date}}</text>
-      <text class='title'>{{recommend.title}}</text>
-      <image class='img' mode='widthFix' src='{{recommend.imgSrc}}' />
+  <!-- dingbu banner -->
+  <view class='banner-container'>
+    <view class='banner'>
+      <image class='img' mode='widthFix' src='{{bannerInfo.imgSrc}}' />
     </view>
 
-    <view class='recommend-box'>
-      <text>+</text>
-      <text bindtap='handleArticleType' wx:for="{{labelList}}" data-articleTypeId="{{item.typeId}}">{{item.type}}</text>
-      <text>•••</text>
+    <view class='type-box'>
+      <text>{{bannerInfo.title}}</text>
+      <!-- <view>
+        <image data-articleType="{{item.articleType}}" bindtap="handleOnMore" src='/assets/image/icon/icon_more.png'/>
+        <button open-type="share">
+          <image src='/assets/image/icon/icon_relay.png'/>
+        </button>
+      </view> -->
     </view>
   </view>
 
   <!-- liebiao -->
-  <view wx:for="{{articleList}}" class='recommend-list-container'>
+  <view wx:for="{{articleData}}" class='recommend-list-container'>
     <view class='pre-article'>
       <view class='article-head'>
         <image src='/assets/image/avatar.png'/>

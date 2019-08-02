@@ -80,6 +80,13 @@ Page({
       }
     })
   },
+  handleArticleType: function(e) {
+    var typeId = e.currentTarget.dataset.articletypeid
+    
+    wx.navigateTo({
+      url: '/pages/type/type?typeId=' + typeId,
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
