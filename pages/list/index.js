@@ -1,4 +1,5 @@
 // pages/list/index.js
+var request = require('../../utils/request')
 Page({
 
   /**
@@ -62,21 +63,14 @@ Page({
   // 获取首页数据
   getHomeData: function() {
     var that = this
-    wx.request({
-      url: 'https://www.easy-mock.com/mock/5d42a3d86d19b61b4096908e/magazine/home',
-      success: function(res){
-        console.log(res.data.data.labelType)
+    request({
+      url: '/home',
+      success: function() {
         that.setData({
           labelList: res.data.data.labelType,
           recommend: res.data.data.recommend,
           articleList: res.data.data.articleList
         })
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
       }
     })
   },

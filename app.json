@@ -1,11 +1,17 @@
 {
   "pages": [
     "pages/list/index",
+    "pages/articleDetail/index",
     "pages/index/index",
     "pages/inside/inside",
     "pages/test/index",
     "pages/type/type",
-    "pages/articleDetail/index"
+    "components/loading/loading",
+    "components/nav/index",
+    "components/tabBar/index",
+    "components/audio/index",
+    "components/video/index",
+    "components/loading/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

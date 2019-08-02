@@ -22,3 +22,5 @@ function showErrMsg() {
     icon: "none" 
   })
 }
+
+module.exports = request
