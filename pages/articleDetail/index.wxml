@@ -1,0 +1,86 @@
+
+<wxs src='../../utils/filter.wxs' module='filter'></wxs>
+<wxs src='../../utils/format.wxs' module='format'></wxs>
+
+<view class='article_container'>
+  <view class='head'>
+    <text class='title'>{{articleDetail.title}}</text>
+    <view class='authorAndDate'>
+        <text>{{articleDetail.author}}</text>
+        <text>{{articleDetail.date}}</text>
+    </view>
+  </view>
+  <view class='media_container'>
+    <swiper
+      class='swiper'
+      wx:if='{{false}}'
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      next-margin="16px"
+    >
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class='swiper_item'>
+          <image mode='widthFix' src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <video
+      wx:elif="{{false}}"
+      id='myVideo'
+      class='video'
+      duration="30"
+      show-mute-btn="true"
+      danmu-btn="true"
+      enable-danmu="true"
+      danmu-list="{{danmuList}}"
+      src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+      >
+      <cover-view class='controls' wx:if="{{isShow}}">
+        <cover-image src='/assets/image/list/article/1.png'></cover-image>
+        <cover-view class='controls_box' bind:tap="onVideoTap">
+          <cover-image  src='/assets/play.png'></cover-image>
+          <cover-view class='time'>10''</cover-view>
+        </cover-view>
+      </cover-view>
+    </video>
+    <view wx:elif="{{true}}" class='container'>
+      <view class='audio_control'>
+        <image bind:tap='onAudioTap' wx:if="{{!isPlay}}" src='/assets/image/icon/icon_circle.png'></image>
+        <image bind:tap='onAudioTap' wx:else src='/assets/image/icon/icon_circle_fill.png'></image>
+      </view>
+      <view class='audio_container'>
+        <view class='audio_info'>
+          <text class='audio_title'>等你下课</text>
+          <text class='audio_from'>来自 周杰伦</text>
+        </view>
+        <view class='audio_progress'>
+          <progress
+            id='progress'
+            stroke-width='3'
+            bind:touchstart="onProgressStart"
+            percent="{{progressPercent}}"
+            style="width: {{progressWidth + 'rpx'}}" />
+          <view
+            bind:touchstart="onAudioCircleStart"
+            bind:touchmove="onAudioCircleMove"
+            class='progress_circle'
+            style="left: {{progressCircleLeft + 'rpx'}}; width: {{progressCircleWidth + 'rpx'}}"></view>
+        </view>
+        <view class='duration'>
+          <text>{{format(audioCurTime)}}</text>
+          <text>{{format(audioDuration)}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class='content'>
+    <text decode="{{true}}">{{filter(articleDetail.content)}}</text>
+  </view>
+  <view class='read_container'>
+    <text class='tip'>阅读数</text>
+    <text class='count'>{{articleDetail.readCount}}</text>
+  </view> 
+</view>

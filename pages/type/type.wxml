@@ -1,0 +1,46 @@
+<!--pages/type/type.wxml-->
+<view class='container'>
+
+  <!-- dingbu banner -->
+  <view class='banner_container'>
+    <view class='banner'>
+      <image class='img' mode='widthFix' src='{{articleData.imgUrl}}' />
+    </view>
+
+    <view class='type-box'>
+      <text>{{articleData.tag}}</text>
+    </view>
+  </view>
+
+  <!-- liebiao -->
+  <view wx:for="{{articleData.articleList}}" class='recommend-list-container'>
+    <view class='pre-article'>
+      <view class='article-head'>
+        <image src="{{item.markAvatar}}"/>
+        <text>{{item.markPeople}}</text>
+        <text>等</text>
+        <text>{{item.markCount}}</text>
+        <text>人马克了</text>
+      </view>
+      <view class='article-cover'>
+        <image mode='widthFix' src='{{item.imgUrl}}'/>
+      </view>
+      <view class='article-title'>
+        <text>{{item.mainTitle}}</text>
+      </view>
+      <view class='article-handle-box'>
+        <!-- <view class='article-review'>
+          <text>{{item.articleType}}</text>
+        </view> -->
+        <view class='article-handle'>
+          <image data-articleType="{{item.articleType}}" bindtap="handleOnMore" src='/assets/image/icon/icon_more.png'/>
+          <button open-type="share">
+            <image src='/assets/image/icon/icon_relay.png'/>
+          </button>
+          <image bindtap='handleOnLike' data-articleLike="{{index}}" wx:if="{{listLike[index]}}" src='/assets/image/icon/icon_circle_fill.png'/>
+          <image bindtap='handleOnLike' data-articleLike="{{index}}" wx:else src='/assets/image/icon/icon_circle.png'/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

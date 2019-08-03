@@ -1,0 +1,46 @@
+/* pages/type/type.wxss */
+@import "../common.wxss";
+.container {
+  background: #ebebeb;
+}
+
+/* dingbu banner */
+
+
+/* liebiao */
+.banner_container {
+  position: relative;
+  margin-bottom: 80rpx;
+}
+.banner {
+  background: #fff;
+  font-size: 0;
+}
+.banner image{
+  width: 750rpx;
+}
+.type-box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  width: 600rpx;
+  height: 140rpx;
+  transform: translate(-50%, 50%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 40rpx 0 rgba(0,0,0,.28);
+}
+.type-box text {
+  font-size: 46rpx;
+  font-weight: bold;
+}
+.article-handle-box {
+  display: block;
+}
+.article-handle {
+  float: right;
+}

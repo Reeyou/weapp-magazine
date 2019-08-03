@@ -1,0 +1,76 @@
+.recommend-list-container {
+  background: #ebebeb;
+  padding: 20rpx 0 0 0;
+}
+.pre-article {
+  background: #fff;
+  padding: 0 20rpx 20rpx 20rpx;
+}
+.article-head {
+  padding: 16rpx 0;
+}
+.article-head image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  /* padding: 10rpx; */
+  /* border: 1px solid rgba(0,0,0,.28); */
+  box-shadow: 0 0 40rpx 0 rgba(0,0,0,.28);
+  margin: 0 16rpx 0 0;
+  vertical-align: middle;
+}
+.article-head text {
+  font-size: 28rpx;
+  color: rgba(0,0,0,.88)
+}
+/* .nickName {
+  color: #00b26a!important;
+} */
+.article-cover {
+  font-size: 0;
+}
+.article-cover image {
+  width: 100%;
+  
+}
+.article-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 48rpx;
+  padding: 24rpx 0;
+}
+.article-handle-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.article-review text {
+  font-size: 26rpx;
+  border: 1px solid black;
+  border-radius: 6rpx;
+  padding: 14rpx 24rpx;
+}
+.article-handle {
+  display: flex;
+}
+.article-handle image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.article-handle button:after {
+  border: none;
+}
+.article-handle button {
+  position: relative;
+  bottom: 28rpx;
+  width: 70rpx;
+  height: 70rpx;
+  padding: 0;
+  background: transparent;
+  margin-left: 10rpx;
+}
+.article-handle button image {
+  margin-left: 0;
+}

@@ -1,0 +1,9 @@
+var filter = function filter(text) {
+  if(!text) {
+    return
+  }
+  var reg = getRegExp('\\n', 'g')
+  console.log(text)
+  return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+module.exports = filter
