@@ -1,5 +1,7 @@
 
 <wxs src='../../utils/filter.wxs' module='filter'></wxs>
+<wxs src='../../utils/format.wxs' module='format'></wxs>
+
 <view class='article_container'>
   <view class='head'>
     <text class='title'>dsfdsf</text>
@@ -11,6 +13,7 @@
   <view class='media_container'>
     <swiper
       class='swiper'
+      wx:if='{{false}}'
       indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}"
       interval="{{interval}}"
@@ -23,8 +26,8 @@
         </swiper-item>
       </block>
     </swiper>
-    <view>&nbsp;</view>
-    <video 
+    <video
+      wx:elif="{{false}}"
       id='myVideo'
       class='video'
       duration="30"
@@ -35,30 +38,39 @@
       src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
       >
       <cover-view class='controls' wx:if="{{isShow}}">
-        <cover-image src='../../assets/image/list/article/1.png'></cover-image>
+        <cover-image src='/assets/image/list/article/1.png'></cover-image>
         <cover-view class='controls_box' bind:tap="onVideoTap">
-          <cover-image  src='../../assets/play.png'></cover-image>
+          <cover-image  src='/assets/play.png'></cover-image>
           <cover-view class='time'>10''</cover-view>
         </cover-view>
       </cover-view>
     </video>
-    <view>&nbsp;</view>
-    <view class='container'>
+    <view wx:elif="{{true}}" class='container'>
       <view class='audio_control'>
-        <image bind:tap='onAudioTap' src=''></image>
+        <image bind:tap='onAudioTap' wx:if="{{!isPlay}}" src='/assets/image/icon/icon_circle.png'></image>
+        <image bind:tap='onAudioTap' wx:else src='/assets/image/icon/icon_circle_fill.png'></image>
       </view>
       <view class='audio_container'>
         <view class='audio_info'>
-          <text class='title'>等你下课</text>
-          <text class='from'>来自 周杰伦</text>
+          <text class='audio_title'>等你下课</text>
+          <text class='audio_from'>来自 周杰伦</text>
         </view>
         <view class='audio_progress'>
-          <progress />
-          <view class='progress_circle'></view>
+          <progress
+            id='progress'
+            stroke-width='3'
+            bind:touchstart="onProgressStart"
+            percent="{{progressPercent}}"
+            style="width: {{progressWidth + 'rpx'}}" />
+          <view
+            bind:touchstart="onAudioCircleStart"
+            bind:touchmove="onAudioCircleMove"
+            class='progress_circle'
+            style="left: {{progressCircleLeft + 'rpx'}}; width: {{progressCircleWidth + 'rpx'}}"></view>
         </view>
         <view class='duration'>
-          <text>0.00</text>
-          <text>8.00</text>
+          <text>{{format(audioCurTime)}}</text>
+          <text>{{format(audioDuration)}}</text>
         </view>
       </view>
     </view>
