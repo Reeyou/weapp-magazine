@@ -1,27 +1,33 @@
 var baseUrl = require("../config/project.config.js")
 
-function request(params) {
-  wx.request({
-    url: baseUrl + params.url,
-    success: function(res) {
-      console.log(res)
-      if(res.data.code == 200) {
-        params.success(res.data)
-      } else {
-        showErrMsg()
-      }
-    },
-    fail: function() {
-      showErrMsg()
-    }
-  })
+function request(url, {method='GET', data={}}) {
+      return new Promise( (resolve, reject) => {
+          wx.request({
+              url: baseUrl + url,
+              method: method,
+              data: data,
+              success: res => {
+                  if(res.data.code == 200) {
+                      resolve(res.data.data)
+                  } else {
+                      _showError()
+                  }
+                  
+              },
+              fail: err => {
+                  reject()
+                  _showError()
+              }
+          })
+      })
+  }
+
+
+function _showError() {
+    wx.showToast({
+        title: "请求错误",
+        icon: "none"
+    })
 }
 
-function showErrMsg() {
-  wx.showToast({
-    title: "请求错误",
-    icon: "none" 
-  })
-}
-
-module.exports = request
+export default request;

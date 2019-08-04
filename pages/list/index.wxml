@@ -15,11 +15,7 @@
       <text>•••</text>
     </view>
   </view>
-  <c-video video-id="1" />
-  <c-nineImg main-title="{{'那就发动机的设计方式是否都是'}}" img-list="{{imgList}}"/>
-  <c-bigImg img-url="{{'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=508387608,2848974022&fm=26&gp=0.jpg'}}" main-title="{{'对方不会受到核辐射的空间分布但是'}}" />
-  <c-pureText />
-  <c-imgText main-title="{{'都快被分布式的肌肤的手机壳变身的接口'}}" sub-head="{{'分端口士大夫精神'}}" />
+
 
   <!-- liebiao -->
   <view wx:for="{{articleList}}" class='recommend-list-container'>
