@@ -1,0 +1,15 @@
+<!--九宫格图片组件-->
+<view class='container'>
+  <view class='img_container'>
+    <image
+      catch:tap="handlePreview"
+      data-index="{{index}}"
+      wx:for="{{imgList}}"
+      src="{{item}}" 
+      wx:if="{{index < 9}}"
+    />
+
+    <text class='img_dots' wx:if="{{imgList.length > 9}}">{{imgList.length}}</text>
+  </view>
+  <view class='main_title'>{{mainTitle}}</view>
+</view>

@@ -5,14 +5,7 @@
     "pages/index/index",
     "pages/inside/inside",
     "pages/test/index",
-    "pages/type/type",
-    "components/loading/loading",
-    "components/nav/index",
-    "components/tabBar/index",
-    "components/audio/index",
-    "components/video/index",
-    "components/loading/index",
-    "components/bigImg/index"
+    "pages/type/type"
   ],
   "window": {
     "backgroundTextStyle": "light",

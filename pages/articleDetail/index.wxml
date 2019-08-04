@@ -26,26 +26,8 @@
         </swiper-item>
       </block>
     </swiper>
-    <video
-      wx:elif="{{false}}"
-      id='myVideo'
-      class='video'
-      duration="30"
-      show-mute-btn="true"
-      danmu-btn="true"
-      enable-danmu="true"
-      danmu-list="{{danmuList}}"
-      src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-      >
-      <cover-view class='controls' wx:if="{{isShow}}">
-        <cover-image src='/assets/image/list/article/1.png'></cover-image>
-        <cover-view class='controls_box' bind:tap="onVideoTap">
-          <cover-image  src='/assets/play.png'></cover-image>
-          <cover-view class='time'>10''</cover-view>
-        </cover-view>
-      </cover-view>
-    </video>
-    <view wx:elif="{{true}}" class='container'>
+    
+    <view wx:elif="{{false}}" class='container'>
       <view class='audio_control'>
         <image bind:tap='onAudioTap' wx:if="{{!isPlay}}" src='/assets/image/icon/icon_circle.png'></image>
         <image bind:tap='onAudioTap' wx:else src='/assets/image/icon/icon_circle_fill.png'></image>
@@ -74,6 +56,25 @@
         </view>
       </view>
     </view>
+    <video
+      wx:elif="{{true}}"
+      id='myVideo'
+      class='video'
+      duration="30"
+      show-mute-btn="true"
+      danmu-btn="true"
+      enable-danmu="true"
+      danmu-list="{{danmuList}}"
+      src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+      >
+      <cover-view class='controls' wx:if="{{isShow}}">
+        <cover-image src='/assets/image/list/article/1.png'></cover-image>
+        <cover-view class='controls_box' bind:tap="onVideoTap">
+          <cover-image  src='/assets/play.png'></cover-image>
+          <cover-view class='time'>10''</cover-view>
+        </cover-view>
+      </cover-view>
+    </video>
 
   </view>
   <view class='content'>

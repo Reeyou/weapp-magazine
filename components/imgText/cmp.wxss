@@ -1,0 +1,23 @@
+/* components/imgText/cmp.wxss */
+.container {
+  display: flex;
+  width: 640rpx;
+  padding: 0 20rpx;
+}
+.text_container {
+  margin-right: 30rpx;
+}
+.mainTitle {
+  font-size: 40rpx;
+  margin-bottom: 12rpx;
+  font-weight: bold;
+}
+.subHead {
+  font-size: 28rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+.img image{
+  width: 160rpx;
+  height: 160rpx;
+}

@@ -1,0 +1,10 @@
+<!--图文组件-->
+<view class='container'>
+  <view class='text_container'>
+    <view class="mainTitle">{{mainTitle}}</view>
+    <view class="subHead">{{subHead}}</view>
+  </view>
+  <view class="img">
+    <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=508387608,2848974022&fm=26&gp=0.jpg"></image>
+  </view>
+</view>
