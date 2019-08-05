@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/articleDetail/index",
-    "pages/type/type"
+    "pages/type/type",
+    "pages/test/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

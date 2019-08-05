@@ -1,6 +1,10 @@
 <!--pages/list/index.wxml-->
-<view class='container'>
-
+<scroll-view
+  class='container'
+  style="height: {{windowHeight}}px"
+  scroll-y="true"
+  bindscrolltolower='toBottom'
+>
   <!-- tuijian -->
   <view class='recommend-container'>
     <view class='article'>
@@ -19,6 +23,8 @@
 
   <!-- liebiao -->
   <c-articleList
+    class='articleList'
+    loadMore="{{loadMore}}"
     article-list="{{articleList}}"
   />
-</view>
+</scroll-view>

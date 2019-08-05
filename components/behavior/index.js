@@ -2,7 +2,7 @@ let behavior = Behavior({
   properties: {
     mainTitle: String,
     subHead: String,
-    imgUrl: String,
+    imgSrc: String,
     imgList: Array
   }
 })

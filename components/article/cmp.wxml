@@ -2,40 +2,42 @@
 <view class='container'>
   <view class="mark-container">
     <image class="avatar" src="{{articleDetail.mark.avatar}}" />
-    <text class="text">{{articleDetail.mark.people}}等{{articleDetail.mark.count}}人马克了</text>
+    <text class="text">{{articleDetail.mark.nickName}}等{{articleDetail.mark.markCount}}人mark了</text>
 </view>
 
 <view >
     <!-- 
-        type=1  九图    nineImg
-        type=2  图文    imgText
-        type=3  video   video
-        type=4  纯文字  pureText
-        type=5  大图    bigImg
+        type=0  九图    nineImg
+        type=1  图文    imgText
+        type=2  video   video
+        type=3  纯文字  pureText
+        type=4  大图    bigImg
     -->
-    <c-bigImg wx:if="{{articleDetail.type == 0}}"
-              img-src="{{articleDetail.imgArray[0]}}"
-              main-title="{{articleDetail.mainTitle}}"/>
+    
 
-    <c-nineImg wx:elif="{{articleDetail.type === 1}}"
-               img-arr="{{articleDetail.imgArray}}"
+    <c-nineImg wx:if="{{articleDetail.type === 0}}"
+               img-list="{{articleDetail.imgList}}"
                main-title="{{articleDetail.mainTitle}}"/>
 
-    <c-imgText wx:elif="{{articleDetail.type === 2}}"
+    <c-imgText wx:elif="{{articleDetail.type === 1}}"
                main-title="{{articleDetail.mainTitle}}"
                sub-head="{{articleDetail.subHead}}"
-               img-src="{{articleDetail.imgArray[0]}}"/>
+               img-src="{{articleDetail.imgList[0]}}"/>
 
-    <c-video wx:elif="{{articleDetail.type === 3}}"
+    <c-video wx:elif="{{articleDetail.type === 2}}"
              main-title="{{articleDetail.mainTitle}}"
              src="{{articleDetail.video.src}}"
              duration="{{articleDetail.video.duration}}"
              poster="{{articleDetail.video.poster}}"
              video-id="{{articleDetail.videoId}}"/>
 
-    <c-pureText wx:else
+    <c-pureText wx:elif="{{articleDetail.type == 3}}"
                 main-title="{{articleDetail.mainTitle}}"
                 sub-head="{{articleDetail.subHead}}"/>
+
+    <c-bigImg wx:elif="{{articleDetail.type == 4}}"
+              img-src="{{articleDetail.imgList[0]}}"
+              main-title="{{articleDetail.mainTitle}}"/>
     
 </view>
   <view class="control-container">

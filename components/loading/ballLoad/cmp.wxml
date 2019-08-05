@@ -1,5 +1,5 @@
 <!--三球 加载-->
-<view class='container'>
+<view class='container' hidden="{{hidden}}">
   <view class='ball'></view>
   <view class='ball'></view>
   <view class='ball'></view>

@@ -8,7 +8,7 @@
 
               <!-- judge-data="{{judgeLikeData}}" -->
 
-  <!-- <c-loading hidden="{{!loading}}" class="loading"/> -->
+  <c-loading wx:if="{{loading}}" class="loading"/>
 
-  <text wx:if="{{noMoreData}}" class="no-more">没有更多了</text>
+  <text wx:if="{{noMore}}" class="no-more">没有更多了</text>
 </view>

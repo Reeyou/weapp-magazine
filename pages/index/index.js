@@ -1,5 +1,6 @@
 // pages/list/index.js
-import { getArticleList } from '../../service/article'
+import { getArticleList, getRecommendById, getTagType} from '../../service/article'
+import randomStr from '../../utils/randomStr'
 Page({
 
   /**
@@ -9,17 +10,8 @@ Page({
     recommend: {},
     tagList: [],
     articleList: [],
-    imgList: ['https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=180868167,273146879&fm=26&gp=0.jpg',
-    'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=508387608,2848974022&fm=26&gp=0.jpg',
-    'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4099762989,3252607071&fm=26&gp=0.jpg',
-    'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1409224092,1124266154&fm=26&gp=0.jpg',
-    'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1734221205,4211923994&fm=26&gp=0.jpg',
-    'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=167219548,1510840028&fm=26&gp=0.jpg',
-    'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1548896602,3212907422&fm=26&gp=0.jpg',
-    'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3925233323,1705701801&fm=26&gp=0.jpg',
-    'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4099762989,3252607071&fm=26&gp=0.jpg',
-    'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=167219548,1510840028&fm=26&gp=0.jpg',
-    ],
+    loadMore: '',
+    windowHeight: 0,
   },
   /**
    * 生命周期函数--监听页面加载
@@ -27,6 +19,22 @@ Page({
   onLoad: function (options) {
     this.getHomeData()
     this.getIsLikeData()
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          windowHeight: res.windowHeight
+        })
+      },
+    })
+  },
+  onPullDownRefresh: function () {
+    console.log('pull down refresh')
+  },
+  toBottom() {
+    this.setData({
+      loadMore: randomStr(20)
+    })
   },
   // 更多点击事件
   handleOnMore: function(e) {
@@ -72,12 +80,12 @@ Page({
   },
   // 获取首页数据
   getHomeData: function() {
-    var that = this
-    getArticleList().then(res => {
-      that.setData({
-        tagList: res.data.tagList,
-        recommend: res.data.recommend,
-        articleList: res.data.articleList
+    Promise.all([getArticleList(), getRecommendById(), getTagType()]).then(res => {
+      console.log(res)
+      this.setData({
+        articleList: res[0].data.articleList,
+        recommend: res[1].data,
+        tagList: res[2].data.tagList,
       })
     })
   },

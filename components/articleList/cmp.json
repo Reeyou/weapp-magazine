@@ -2,6 +2,6 @@
   "component": true,
   "usingComponents": {
     "c-article": "/components/article/cmp",
-    "c-loading": "/components/loading/circleScale/cmp"
+    "c-loading": "/components/loading/ballLoad/cmp"
   }
 }

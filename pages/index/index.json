@@ -3,5 +3,7 @@
     "c-circleLoading": "/components/loading/circleScale/cmp",
     "c-ballLoading": "/components/loading/ballLoad/cmp",
     "c-articleList": "/components/articleList/cmp"
-  }
+  },
+  "onReachBottomDistance": 1000,
+  "enablePullDownRefresh": true
 }

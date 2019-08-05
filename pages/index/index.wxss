@@ -1,12 +1,14 @@
 /* pages/list/index.wxss */
 @import '../common.wxss';
 .container {
-  
+  background-color: rgba(0, 0, 0, .1);
 }
 
 /* tuijian */
 .recommend-container {
   padding: 0 25rpx;
+  background: #fff;
+  
 }
 .article {
   display: flex;
@@ -40,7 +42,8 @@
 }
 
 .recommend-box {
-
+  /* border-bottom: 2rpx solid rgba(0,0,0,.28); */
+  background: #fff;
 }
 .recommend-box text {
   display: inline-block;
@@ -57,3 +60,6 @@
 }
 
 /* liebiao */
+.articleList {
+  
+}

@@ -1,5 +1,5 @@
 <!--纯文字组件-->
 <view class='container'>
-  <view class='mainTtile'>{{mainTitle}}</view>
+  <view class='mainTitle'>{{mainTitle}}</view>
   <view class='subHead'>{{subHead}}</view>
 </view>

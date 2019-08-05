@@ -4,7 +4,7 @@
 }
 
 .mark-container {
-  padding: 20rpx;
+  padding: 20rpx 0;
 }
 
 .avatar {
@@ -25,12 +25,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20rpx;
+  padding: 20rpx 0;
   margin-top: 10rpx;
 }
 
 .control-box {
   display: flex;
+  align-items: center;
 }
 
 .box {

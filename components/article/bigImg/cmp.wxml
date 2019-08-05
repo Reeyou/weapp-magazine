@@ -1,7 +1,7 @@
 <!--大图组件-->
 <view class='container'>
   <view class="img_container">
-    <image mode="widthFix" src="{{imgUrl}}"></image>
+    <image mode="widthFix" src="{{imgSrc}}"></image>
   </view>
   <view class="text_container">
     <text>{{mainTitle}}</text>
