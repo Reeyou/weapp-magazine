@@ -1,17 +1,17 @@
-// components/article/cmp.js
+
+import { behavior } from '../../behavior/index';
+
 Component({
-  /**
-   * 组件的属性列表
-   */
+  behaviors: [ behavior ],
   properties: {
-    articleDetail: Object,
+   
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    likeStatus: false
+
   },
 
   /**

@@ -1,5 +1,6 @@
 .container {
   background-color: #fff;
+  padding: 0 25rpx;
 }
 
 .mark-container {

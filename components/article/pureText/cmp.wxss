@@ -1,0 +1,14 @@
+/* components/pureText.wxss */
+.container {
+  
+}
+.mainTitle {
+  font-size: 40rpx;
+  font-weight: 300;
+  margin-bottom: 20rpx;
+}
+.subHead {
+  font-size: 26rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}

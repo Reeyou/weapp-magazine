@@ -1,14 +1,15 @@
-var baseUrl = require("../config/project.config.js")
+import baseUrl from "../config/project.config.js"
 
-function request(url, {method='GET', data={}}) {
+export default function request(url, options={}) {
+    const newOptions = [...options]
       return new Promise( (resolve, reject) => {
           wx.request({
               url: baseUrl + url,
-              method: method,
-              data: data,
+              method: newOptions.method || 'GET',
+              data: newOptions.body || '',
               success: res => {
                   if(res.data.code == 200) {
-                      resolve(res.data.data)
+                      resolve(res.data)
                   } else {
                       _showError()
                   }
@@ -29,5 +30,3 @@ function _showError() {
         icon: "none"
     })
 }
-
-export default request;

@@ -1,17 +1,17 @@
-// components/article/cmp.js
+// components/pureText.js
+import { behavior } from '../../behavior/index'
 Component({
-  /**
-   * 组件的属性列表
-   */
+  behavior: [behavior],
   properties: {
-    articleDetail: Object,
+    mainTitle: String,
+    subHead: String
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    likeStatus: false
+
   },
 
   /**

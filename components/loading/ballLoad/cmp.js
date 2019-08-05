@@ -1,17 +1,17 @@
-// components/article/cmp.js
+// components/loading/ballLoad/cmp.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    articleDetail: Object,
+
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    likeStatus: false
+
   },
 
   /**

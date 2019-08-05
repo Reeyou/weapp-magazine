@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarBackgroundColor": "#00b26a",
-  "navigationBarTitleText": "小程序首页"
+  "usingComponents": {
+    "c-circleLoading": "/components/loading/circleScale/cmp",
+    "c-ballLoading": "/components/loading/ballLoad/cmp",
+    "c-articleList": "/components/articleList/cmp"
+  }
 }

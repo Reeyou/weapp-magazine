@@ -1,0 +1,11 @@
+.container {
+ 
+}
+.img_container image{
+  width: 710rpx;
+  margin-bottom: 20rpx;
+}
+.text_container {
+  font-size: 40rpx;
+  font-weight: bold;
+}

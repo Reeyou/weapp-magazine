@@ -1,5 +1,0 @@
-<!--纯文字组件-->
-<view class='container'>
-  <view class='mainTtile'>{{mainTitle}}qqqqqqqqqqqqqqqq</view>
-  <view class='subHead'>{{subHead}}qqqqqqqqqqqqq</view>
-</view>

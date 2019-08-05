@@ -1,10 +1,7 @@
 {
   "pages": [
-    "pages/list/index",
-    "pages/articleDetail/index",
     "pages/index/index",
-    "pages/inside/inside",
-    "pages/test/index",
+    "pages/articleDetail/index",
     "pages/type/type"
   ],
   "window": {

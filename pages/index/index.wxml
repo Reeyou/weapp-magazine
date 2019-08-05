@@ -1,13 +1,24 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!--pages/list/index.wxml-->
+<view class='container'>
+
+  <!-- tuijian -->
+  <view class='recommend-container'>
+    <view class='article'>
+      <text class="date">{{recommend.date}}</text>
+      <text class='title'>{{recommend.title}}</text>
+      <image class='img' mode='widthFix' src='{{recommend.imgUrl}}' />
+    </view>
+
+    <view class='recommend-box'>
+      <text>+</text>
+      <text bindtap='handleArticleType' wx:for="{{tagList}}" data-articleTypeId="{{item.typeId}}">{{item.type}}</text>
+      <text>•••</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text bind:tap='navagateTo' class="user-motto">{{motto}}</text>
-  </view>
+
+
+  <!-- liebiao -->
+  <c-articleList
+    article-list="{{articleList}}"
+  />
 </view>
