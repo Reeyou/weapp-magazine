@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  width: 750rpx;
+  padding: 25rpx;
+  background: #fff;
+  white-space: nowrap;
+}
+.nav {
+  font-size: 36rpx;
+  color: #888;
+  padding: 0 30rpx;
+}
+.active {
+  color: #000;
+}

@@ -1,3 +1,2 @@
-<!--components/tag/cmp.wxml-->
+<!--标签-->
 <view class='container' bindtap="onTap">{{tag}}</view>
-

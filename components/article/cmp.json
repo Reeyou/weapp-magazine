@@ -6,7 +6,7 @@
     "c-imgText": "/components/article/imgText/cmp",
     "c-nineImg": "/components/article/nineImg/cmp",
     "c-video": "/components/article/video/cmp",
-    "c-tag": "/components/tag/cmp",
+    "c-tag": "/components/tagList/tag/cmp",
     "c-more": "/components/more/cmp",
     "c-like": "/components/like/cmp",
     "c-share": "/components/share/cmp"

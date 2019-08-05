@@ -5,20 +5,13 @@
   scroll-y="true"
   bindscrolltolower='toBottom'
 >
+  <c-navBar class='nav' />
   <!-- tuijian -->
-  <view class='recommend-container'>
-    <view class='article'>
-      <text class="date">{{recommend.date}}</text>
-      <text class='title'>{{recommend.title}}</text>
-      <image class='img' mode='widthFix' src='{{recommend.imgUrl}}' />
-    </view>
-
-    <view class='recommend-box'>
-      <text>+</text>
-      <text bindtap='handleArticleType' wx:for="{{tagList}}" data-articleTypeId="{{item.typeId}}">{{item.type}}</text>
-      <text>•••</text>
-    </view>
-  </view>
+  <c-recommend recommend="{{recommend}}" />
+  <c-tagList class='tagList' tagList="{{tagList}}">
+    <c-add slot='add' class='add'>+</c-add>
+    <view slot='more' class='more' catch:tap='toCatelog'>•••</view>
+  </c-tagList>
 
 
   <!-- liebiao -->

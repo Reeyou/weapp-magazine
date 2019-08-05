@@ -28,6 +28,11 @@ Page({
       },
     })
   },
+  toCatelog() {
+    wx.navigateTo({
+      url: '/pages/catelog/index',
+    })
+  },
   onPullDownRefresh: function () {
     console.log('pull down refresh')
   },
