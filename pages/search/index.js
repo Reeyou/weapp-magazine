@@ -1,38 +1,38 @@
-import {tagInfoList} from "../../utils/tagList.js";
-import { subscribe } from '../../service/subscribe'
-const Subscribe = new subscribe()
-
+// pages/search/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tagInfoList: tagInfoList,
-    tagList: []
+    searchWord: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getTagList()
-  },
-  getTagList() {
-    const tagList = Subscribe.getSubs('tagList')
-    console.log(tagList)
+    const searchWord = options.searchWord
     this.setData({
-      tagList: tagList
+      searchWord
     })
   },
-  onSubscribe() {
-    this.getTagList()
+  getData() {
+
   },
-  
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
   onShow: function () {
-    this.setData({
-      searchWord: ''
-    })
+    
   },
 
   /**

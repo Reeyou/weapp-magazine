@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/mine/index",
     "pages/index/index",
+    "pages/catelog/index",
+    "pages/mine/index",
     "pages/articleDetail/index",
     "pages/type/type",
     "pages/test/index",
-    "pages/catelog/index"
-    
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

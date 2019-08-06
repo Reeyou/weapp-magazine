@@ -1,1 +1,31 @@
-/* pages/catelog/index.wxss */
+.container {
+  padding: 25rpx;
+}
+
+.mark_container {
+  
+}
+.mark_control {
+  display: flex;
+  justify-content: space-between;
+  margin: 25rpx 0;
+}
+.my_magazine, .manage_magazine {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.manage_container {
+
+}
+
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 30rpx 0;
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+}

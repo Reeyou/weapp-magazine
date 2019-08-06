@@ -1,0 +1,18 @@
+.search_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search_input {
+  width: 600rpx;
+  height: 80rpx;
+  font-size: 26rpx;
+  background: #f3f3f3;
+  /* border: 1px solid rgba(0,0,0,.48); */
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+.search_text {
+  font-size: 28rpx;
+  
+}

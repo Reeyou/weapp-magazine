@@ -1,2 +1,24 @@
 <!--pages/catelog/index.wxml-->
-<text>pages/catelog/index.wxml</text>
+<view class='container'>
+  <view>
+    <c-search value='{{searchWord}}' />
+  </view>
+  <view class='mark_container'>
+    <view class='mark_control'>
+      <view class='my_magazine'>我的杂志</view>
+      <view class='manage_magazine'>管理杂志</view>
+    </view>
+    <c-tagList tagList="{{tagList}}">
+      <c-add slot='add' style='margin-right: 20rpx'/>
+    </c-tagList>
+  </view>
+  <view wx:for="{{tagInfoList}}" wx:for-item='tagListItem' wx:key='{{title}}'>
+    <view class='title'>{{tagListItem.title}} ></view>
+    <view>
+      <view class='listItem' wx:for="{{tagListItem.tagList}}" wx:key='{{tagId}}'>
+          <text># {{item.tag}}</text>
+          <c-subscribe tag="{{item.tag}}" catch:subscribe='onSubscribe' tag-id='{{item.tagId}}' />
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/search/index.wxml-->
+<view>
+  <c-search value='{{searchWord}}' />
+  <c-articleList />
+</view>

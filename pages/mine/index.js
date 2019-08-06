@@ -1,9 +1,12 @@
 // pages/mine/index.js
+import { like } from '../../service/like'
+const Like = new like()
 Page({
   
   data: {
     userInfo: {},
-    authrized: false
+    authrized: false,
+    likeList: []
   },
 
   /**
@@ -19,15 +22,18 @@ Page({
                 userInfo: res.userInfo,
                 authrized: true
               })
+              this.getLikeList()
             },
           })
         }
       }
     })
   },
+  onShow() {
+    this.getLikeList()
+  },
   getUserInfo(e) {
     const userInfo = e.detail.userInfo
-    console.log(userInfo)
 
     if(userInfo) {
       this.setData({
@@ -35,6 +41,13 @@ Page({
         authrized: true
       })
     }
+  },
+  getLikeList() {
+    const likeList = Like.getLikeList('likeList')
+
+    this.setData({
+      likeList
+    })
   }
 
 })

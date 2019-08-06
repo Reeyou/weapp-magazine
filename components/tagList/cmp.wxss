@@ -1,4 +1,4 @@
 .container {
-  padding: 0 25rpx;
+  /* padding: 0 25rpx; */
   background: #fff;
 }

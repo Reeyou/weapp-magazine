@@ -1,10 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0 30rpx;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, .1);
 }
-
+.mine_container {
+  padding: 0 25rpx;
+  background: #fff;
+}
 .userInfo {
   display: flex;
   justify-content: space-between;
@@ -42,4 +44,9 @@
 .getuserInfo {
   margin: 0;
   padding: 0;
+}
+
+.articleList {
+  margin-top: 20rpx;
+  /* padding */
 }

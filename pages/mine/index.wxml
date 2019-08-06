@@ -14,10 +14,11 @@
         <image src='/assets/mark/relay.png' slot='img'></image>
       </c-share>
     </view>
-    
   </view>
 
-  <c-articleList />
+  <view class='articleList'>
+    <c-articleList articleList='{{likeList}}' />
+  </view>
   <!-- <c-share /> -->
 </view>
 

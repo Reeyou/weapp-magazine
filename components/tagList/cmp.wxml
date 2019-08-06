@@ -5,8 +5,8 @@
     class='tag'
     wx:for="{{tagList}}"
     wx:key="{{type}}"
-    tag="{{item.type}}"
-    tagId="{{item.typeId}}"/>
+    tag="{{item.tag}}"
+    tagId="{{item.tagId}}"/>
   <slot name='more'></slot>
 </view>
 
