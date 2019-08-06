@@ -1,1 +1,4 @@
-/* components/share/cmp.wxss */
+.container {
+  padding: 0 !important;
+  border: none !important;
+}

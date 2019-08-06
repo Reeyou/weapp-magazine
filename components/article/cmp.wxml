@@ -46,9 +46,9 @@
     </view>
     <view class="control-box">
         <c-more class="box" tag="{{articleDetail.tag}}"/>
-        <!-- <c-share open-type="share" class="box share">
-            <image src="/images/mark/relay.png" slot="img"/>
-        </c-share> -->
+        <c-share open-type="share" class="box share">
+            <image src="/assets/mark/relay.png" slot="img"/>
+        </c-share>
         <c-like class="box" like="{{likeStatus}}" catch:like="onLike"/>
     </view>
 

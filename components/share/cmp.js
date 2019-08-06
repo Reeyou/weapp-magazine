@@ -1,10 +1,10 @@
 // components/share/cmp.js
 Component({
-  /**
-   * 组件的属性列表
-   */
+  options: {
+    multipleSlots: true
+  },
   properties: {
-
+    openType: String
   },
 
   /**
@@ -18,6 +18,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    getUserInfo(e) {
+      this.triggerEvent('getUserInfo',e.detail,{})
+    }
   }
 })

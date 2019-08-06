@@ -1,2 +1,9 @@
 <!--components/share/cmp.wxml-->
-<text>components/share/cmp.wxml</text>
+<button
+  plain='true'
+  open-type="{{openType}}"
+  class='container'
+  bindgetuserinfo="getUserInfo"
+>
+  <slot name='img'></slot>
+</button>

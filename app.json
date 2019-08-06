@@ -1,16 +1,41 @@
 {
   "pages": [
+    "pages/mine/index",
     "pages/index/index",
     "pages/articleDetail/index",
     "pages/type/type",
     "pages/test/index",
     "pages/catelog/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/catelog/index",
+        "text": "目录",
+        "iconPath": "assets/tab/catalog.png",
+        "selectedIconPath": "assets/tab/catalog_selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "青芒",
+        "iconPath": "assets/tab/index.png",
+        "selectedIconPath": "assets/tab/index_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "assets/tab/mark.png",
+        "selectedIconPath": "assets/tab/mark_selected.png"
+      }
+    ]
   },
   "requiredBackgroundModes": [
     "false"

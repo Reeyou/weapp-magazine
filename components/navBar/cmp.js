@@ -30,6 +30,11 @@ Component({
       if(currentIndex == activeIndex) {
         return
       }
+
+      this.triggerEvent("nav", {
+        activeIndex
+      },{})
     }
+    
   }
 })

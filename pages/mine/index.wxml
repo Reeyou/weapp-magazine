@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='mine_container'>
+    <view class='userInfo'>
+      <view class='name'>{{userInfo.nickName}}</view>
+      <view class='avatar'>
+        <image wx:if="{{authrized}}" src='{{userInfo.avatarUrl}}'></image>
+        <c-share openType="getUserInfo" bind:getUserInfo='getUserInfo'>
+          <image src='/assets/mark/login.png' slot='img'></image>
+        </c-share>
+      </view>
+    </view>
+    <view class='share'>
+      <c-share openType="share">
+        <image src='/assets/mark/relay.png' slot='img'></image>
+      </c-share>
+    </view>
+    
+  </view>
+
+  <c-articleList />
+  <!-- <c-share /> -->
+</view>
+

@@ -12,6 +12,7 @@ Page({
     articleList: [],
     loadMore: '',
     windowHeight: 0,
+    id: 0
   },
   /**
    * 生命周期函数--监听页面加载
@@ -28,8 +29,23 @@ Page({
       },
     })
   },
+  onNav(e) {
+    const id = e.detail.activeIndex
+
+    this.setData({
+      id: id,
+      recommend: {},
+      tagList: [],
+      articleList: [],
+    })
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 400
+    })
+    this.getHomeData(id)
+  },
   toCatelog() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/catelog/index',
     })
   },
@@ -84,8 +100,8 @@ Page({
     })
   },
   // 获取首页数据
-  getHomeData: function() {
-    Promise.all([getArticleList(), getRecommendById(), getTagType()]).then(res => {
+  getHomeData: function(id) {
+    Promise.all([getArticleList(id), getRecommendById(id), getTagType(id)]).then(res => {
       console.log(res)
       this.setData({
         articleList: res[0].data.articleList,

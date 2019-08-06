@@ -9,6 +9,11 @@ Component({
       type: String,
       value: '',
       observer: 'loadMore'
+    },
+    id: {
+      type: Number,
+      value: 0,
+      observer: 'hasMoreData'
     }
   },
 
@@ -25,9 +30,6 @@ Component({
    */
   methods: {
     loadMore() {
-      // this.setData({
-      //   noMore: false
-      // })
 
       console.log(this.data.noMore)
       if(this.data.moMore) {
@@ -38,6 +40,11 @@ Component({
       this.loadLock()
       this.getMoreData()
       
+    },
+    hasMoreData() {
+      this.setData({
+        noMore: false
+      })
     },
     getMoreData() {
       const start = this.data.articleList.length;

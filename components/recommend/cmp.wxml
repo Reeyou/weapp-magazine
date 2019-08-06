@@ -1,7 +1,7 @@
 <!--首页推荐-->
 <view class='recommend-container'>
   <view class='article'>
-    <text class="date">{{date}}</text>
+    <text class="date">{{id == 0 ? date : articleTypeList[id] }}</text>
     <text class='title'>{{recommend.title}}</text>
     <image class='img' mode='widthFix' src='{{recommend.imgUrl}}' hidden="{{!recommend.imgUrl}}"/>
     <view class='skeleton' hidden="{{recommend.imgUrl}}">

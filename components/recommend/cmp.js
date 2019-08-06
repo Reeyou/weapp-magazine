@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    recommend: Object
+    recommend: Object,
+    id: Number
   },
 
   attached() {
@@ -12,6 +13,7 @@ Component({
   },
   data: {
     date: '',
+    articleTypeList: ['青芒','兴趣','技术','时尚','萌宠','恋爱'],
   },
 
   /**
