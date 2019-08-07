@@ -55,12 +55,6 @@
 					"pathName": "pages/type/type",
 					"query": "",
 					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "测试",
-					"pathName": "pages/test/index",
-					"scene": null
 				}
 			]
 		}

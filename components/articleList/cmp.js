@@ -10,7 +10,7 @@ Component({
       value: '',
       observer: 'loadMore'
     },
-    id: {
+    magazineId: {
       type: Number,
       value: 0,
       observer: 'hasMoreData'
