@@ -30,12 +30,9 @@ Component({
    */
   methods: {
     loadMore() {
-
-      console.log(this.data.noMore)
       if(this.data.moMore) {
         return
       } 
-      // console.log('test')
       // 加锁
       this.loadLock()
       this.getMoreData()

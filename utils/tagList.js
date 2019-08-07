@@ -25,10 +25,6 @@ const tagInfoList = [
             {
                 tag: "礼物",
                 tagId: 5
-            },
-            {
-                tag: "球鞋",
-                tagId: 6
             }
         ]
     },
@@ -38,18 +34,6 @@ const tagInfoList = [
             {
                 tag: "日韩剧",
                 tagId: 7
-            },
-            {
-                tag: "游戏",
-                tagId: 8
-            },
-            {
-                tag: "古典音乐",
-                tagId: 9
-            },
-            {
-                tag: "手账",
-                tagId: 10
             },
             {
                 tag: "电影",
@@ -66,80 +50,6 @@ const tagInfoList = [
             {
                 tag: "手机摄影",
                 tagId: 14
-            }
-        ]
-    },
-    {
-        title: "世界",
-        tagList: [
-            {
-                tag: "菜市场",
-                tagId: 15
-            },
-            {
-                tag: "环球旅行",
-                tagId: 16
-            },
-            {
-                tag: "艺术展览",
-                tagId: 17
-            },
-            {
-                tag: "酒店民宿",
-                tagId: 18
-            },
-            {
-                tag: "日本旅行",
-                tagId: 19
-            },
-            {
-                tag: "出行锦囊",
-                tagId: 20
-            },
-            {
-                tag: "打折机票",
-                tagId: 21
-            }
-        ]
-    },
-    {
-        title: "新事",
-        tagList: [
-            {
-                tag: "轻芒杂志",
-                tagId: 22
-            },
-            {
-                tag: "设计生活",
-                tagId: 23
-            },
-            {
-                tag: "轻芒封面文章",
-                tagId: 24
-            },
-            {
-                tag: "iPhone",
-                tagId: 25
-            },
-            {
-                tag: "宇宙探索",
-                tagId: 26
-            },
-            {
-                tag: "第一财经周刊",
-                tagId: 27
-            },
-            {
-                tag: "人工智能",
-                tagId: 28
-            },
-            {
-                tag: "Google",
-                tagId: 29
-            },
-            {
-                tag: "轻芒热点",
-                tagId: 30
             }
         ]
     },

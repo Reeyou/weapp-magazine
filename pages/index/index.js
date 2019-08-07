@@ -12,7 +12,7 @@ Page({
     articleList: [],
     loadMore: '',
     windowHeight: 0,
-    id: 0
+    id: 1
   },
   /**
    * 生命周期函数--监听页面加载
@@ -100,8 +100,8 @@ Page({
     })
   },
   // 获取首页数据
-  getHomeData: function(id) {
-    Promise.all([getArticleList(id), getRecommendById(id), getTagType(id)]).then(res => {
+  getHomeData: function(magazineId) {
+    Promise.all([getArticleList(0,magazineId), getRecommendById(magazineId), getTagType(magazineId)]).then(res => {
       console.log(res)
       this.setData({
         articleList: res[0].data.articleList,

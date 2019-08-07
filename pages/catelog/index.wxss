@@ -8,16 +8,21 @@
 .mark_control {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 25rpx 0;
+  /* vertical-align: bottom; */
 }
-.my_magazine, .manage_magazine {
+.my_magazine {
   font-size: 34rpx;
   font-weight: bold;
 }
-.manage_container {
-
+.manage_magazine {
+  font-size: 28rpx;
+  
 }
-
+.tagList .container{
+  padding: 0!important;
+}
 .title {
   font-size: 40rpx;
   font-weight: bold;

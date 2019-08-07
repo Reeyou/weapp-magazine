@@ -5,24 +5,26 @@
   scroll-y="true"
   bindscrolltolower='toBottom'
 >
-  <c-navBar class='nav' catch:nav='onNav' />
-  <!-- tuijian -->
-  <c-recommend recommend="{{recommend}}" id="{{id}}"/>
-  <c-tagList class='tagList' tagList="{{tagList}}">
-    <c-add slot='add' class='add' wx:if="{{id == 0}}" />
-    <view
-      slot='more'
-      class='more'
-      wx:if="{{id == 0}}"
-      catch:tap='toCatelog'
-    >•••</view>
-  </c-tagList>
+    <c-navBar class='nav' catch:nav='onNav' />
+    <!-- tuijian -->
+    <c-recommend recommend="{{recommend}}" id="{{id}}"/>
+    <view class='tagList'>
+      <c-tagList tagList="{{tagList}}">
+        <c-add slot='add' class='add' wx:if="{{id == 1}}" />
+        <view
+          slot='more'
+          class='more'
+          wx:if="{{id == 1}}"
+          catch:tap='toCatelog'
+        >•••</view>
+      </c-tagList>
+    </view>
 
 
-  <!-- liebiao -->
-  <c-articleList
-    class='articleList'
-    loadMore="{{loadMore}}"
-    article-list="{{articleList}}"
-  />
+    <!-- liebiao -->
+    <c-articleList
+      class='articleList'
+      loadMore="{{loadMore}}"
+      article-list="{{articleList}}"
+    />
 </scroll-view>

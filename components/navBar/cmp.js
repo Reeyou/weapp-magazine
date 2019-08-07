@@ -11,9 +11,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-    articleTypeList: ['青芒','兴趣','技术','时尚','萌宠','恋爱'],
-    currentIndex: 0,
-    activeId: 'id0'
+    articleTypeList: ['兴趣','青芒','恋爱'],
+    currentIndex: 1,
+    activeId: 'id1'
   },
 
   /**

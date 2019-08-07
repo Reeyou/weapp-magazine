@@ -1,5 +1,5 @@
 <!--导航栏组件-->
-<scroll-view 
+<!-- <scroll-view 
   class="container"
   scroll-x="true"
   scroll-into-view='{{activeId}}'
@@ -13,4 +13,14 @@
     data-index="{{index}}"
     id="{{'id' +index}}"
   >{{item}}</text>
-</scroll-view>
+</scroll-view> -->
+<view class='container'>
+  <text
+    wx:for="{{articleTypeList}}"
+    wx:key="*this"
+    class="nav {{index == currentIndex ? 'active' : ''}}"
+    bind:tap="onSelect"
+    data-index="{{index}}"
+    id="{{'id' +index}}"
+  >{{item}}</text>
+</view>

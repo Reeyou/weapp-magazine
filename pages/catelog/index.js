@@ -9,7 +9,8 @@ Page({
    */
   data: {
     tagInfoList: tagInfoList,
-    tagList: []
+    tagList: [],
+    searchWord: ''
   },
 
   /**

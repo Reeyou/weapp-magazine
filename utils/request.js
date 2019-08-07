@@ -7,6 +7,9 @@ export default function request(url, options={}) {
               url: baseUrl + url,
               method: newOptions.method || 'GET',
               data: newOptions.body || '',
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+                },
               success: res => {
                   if(res.data.code == 200) {
                       resolve(res.data)

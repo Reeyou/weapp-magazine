@@ -2,7 +2,7 @@
 @import '../common.wxss';
 .container {
   background-color: rgba(0, 0, 0, .1);
-  /* padding: 0 25rpx; */
+  width: 100%;
 }
 .nav {
   position: fixed;
@@ -27,6 +27,7 @@
 
 
 /* liebiao */
-.articleList {
-  
+.tagList {
+  background: #fff;
+  padding: 0 25rpx;
 }

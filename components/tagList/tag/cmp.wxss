@@ -4,5 +4,4 @@
   font-size: 24rpx;
   border-radius: 10rpx;
   border: 2rpx solid black;
-  margin: 0 20rpx 40rpx 0;
 }

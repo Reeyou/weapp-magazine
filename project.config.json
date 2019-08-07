@@ -55,6 +55,13 @@
 					"pathName": "pages/type/type",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/search/index",
+					"pathName": "pages/search/index",
+					"query": "searchWord=读书",
+					"scene": null
 				}
 			]
 		}

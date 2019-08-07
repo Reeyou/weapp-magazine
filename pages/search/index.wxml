@@ -1,5 +1,13 @@
 <!--pages/search/index.wxml-->
-<view>
-  <c-search value='{{searchWord}}' />
-  <c-articleList />
+<view class='search_container'>
+  <view class='search'>
+    <c-search value='{{searchWord}}'/>
+  </view>
+  <view class="recommend-container">
+    <view class="text">#{{tag}}></view>
+    <view class="recommend-list">
+        <view class="recommend" wx:for="{{recommend}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+  <c-articleList articleList="{{articleList}}"/>
 </view>
