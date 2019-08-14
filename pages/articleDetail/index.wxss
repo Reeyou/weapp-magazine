@@ -125,10 +125,11 @@
 
 .content {
   padding: 20rpx 0;
-  font-size: 34rpx;
-  /* letter-spacing: 1rpx; */
+  font-size: 32rpx;
+  letter-spacing: 1rpx;
   line-height: 44rpx;
   text-indent: 2em;
+  line-height: 44rpx;
 }
 .read_container {
   margin-top: 24rpx;

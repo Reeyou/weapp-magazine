@@ -9,3 +9,6 @@ export function getRecommendById(magazineId = 1) {
 export function getTagType(magazineId = 1) {
   return request(`/getTagType/${magazineId}`);
 }
+export function getArticleDetail() {
+  return request(`/articleDetail`);
+}

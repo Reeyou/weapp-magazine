@@ -1,6 +1,6 @@
 // pages/articleDetail/index.js
 var myAudio = wx.getBackgroundAudioManager()
-var request = require("../../utils/request")
+import { getArticleDetail, searchArticleList } from '../../service/article'
 
 Page({
   
@@ -50,14 +50,10 @@ Page({
     this.getProgressLeft()
   },
   getArticle: function() {
-    var that = this
-    request({
-      url: '/articleDetail',
-      success: function(res) {
-        that.setData({
-          articleDetail: res.data
-        })
-      }
+    getArticleDetail().then(res => {
+      this.setData({
+        articleDetail: res.data
+      })
     })
   },
   getProgressLeft: function() {
